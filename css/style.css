@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(211, 211, 211);
+ display: flex;
+ flex-direction: column; 
+ justify-content: center;
+ align-items: center;  
+}
+form{
+    
+}
+input{
+    margin: 0.5vh;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aqua;
+    width: 80%;
+    list-style: none;
+}
+nav{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    
+}
+header{
+    background-color: burlywood;
+    width: 100vw;
+}
