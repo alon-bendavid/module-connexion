@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $mysqli = mysqli_connect("localhost", "root", "", "moduleconnexion");
 if (mysqli_connect_errno()) {
     die('conecnection error' . mysqli_connect_error());
@@ -9,9 +9,13 @@ $request = $mysqli->query("SELECT * from utilisateurs");
 $usernames = [];
 while (($fetched_table = $request->fetch_array())  != 0) {
     $usernames[] =   $fetched_table[1];
-    // var_dump($fetched_table[1]);
+    // var_dump($fetched_table);
     // print_r($fetched_table[1]);
 }
+
+
+
+
 //check if username already exist
 $exiest = true;
 if (isset($_POST['submit'])) {
@@ -57,10 +61,12 @@ if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
     mysqli_stmt_bind_param($stmt, "ssss", $username, $name, $Lname, $pwd);
     mysqli_stmt_execute($stmt);
     header('Location: ' . 'connexion.php');
+    echo "user hes been successfully created";
 }
 
 
-    
+
+
 
 // $sql = "INSERT INTO utilisateurs (`id`, `login`, `prenom`, `nom`, `password`) VALUES (NULL,$username,$name, $Lname,$pwd)";
 
@@ -68,3 +74,21 @@ if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
 // if (isset($_POST['submit'])) {
 //     header('Location: ' . 'connexion.php');
 // }
+$mysqli = new mysqli("localhost", "root", "", "moduleconnexion");
+//select students table 
+$request = $mysqli->query("SELECT * FROM utilisateurs where  login ");
+//insert into n array
+
+while (($fetched_table = $request->fetch_array())  != 0) {
+    var_dump($fetched_table);
+
+    if ($_POST['loginUsr'] == $fetched_table[0]) {
+        echo "there is a match";
+    }
+    if (isset($_POST['loginUsr'])) {
+
+        var_dump($fetched_table);
+        echo $fetched_table[0];
+    }
+    var_dump($fetched_table);
+}
