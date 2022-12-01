@@ -19,12 +19,13 @@
 <header>
     <nav>
         <ul>
-            <li> <a href="index.php">home</a> </li>
-            <li> <a href="inscription.php">Sign Up</a> </li>
-            <li> <a href="connexion.php">Sign In</a> </li>
-            <li> <a href="profil.php">Profile</a> </li>
-            <li> <a href="admin.php">Admin Page</a> </li>
-
+            <div class="navBar">
+                <li> <a href="index.php">home</a> </li>
+                <li> <a href="inscription.php">Sign Up</a> </li>
+                <li> <a href="connexion.php">Sign In</a> </li>
+                <li> <a href="profil.php">Profile</a> </li>
+                <li> <a href="admin.php">Admin Page</a> </li>
+            </div>
 
         </ul>
     </nav>
