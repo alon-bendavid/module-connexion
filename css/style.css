@@ -39,7 +39,9 @@ input{
 }
 a{
     text-decoration: none;
-    color: rgb(70, 181, 245);
+    color: rgb(250, 250, 250);
+    font-family: 'Lato', sans-serif;
+
 }
 ul{
     display: flex;
@@ -51,7 +53,7 @@ ul{
     
 }
 nav{
-    /* background-color: blue; */
+    background-color: rgb(189, 189, 189);
     display: flex;
     justify-content: center;
     

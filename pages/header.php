@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <header>
     <nav>
@@ -24,7 +27,11 @@
                 <li> <a href="inscription.php">Sign Up</a> </li>
                 <li> <a href="connexion.php">Sign In</a> </li>
                 <li> <a href="profil.php">Profile</a> </li>
+
                 <li> <a href="admin.php">Admin Page</a> </li>
+                <?php if (isset($_SESSION['admin'])) {
+                    '  <li> <a href="index.php">test</a> </li>  ';
+                } ?>
             </div>
 
         </ul>
