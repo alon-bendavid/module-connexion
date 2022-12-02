@@ -1,6 +1,11 @@
 <?php
+//connect into database when inside plesk
+// $mysqli = mysqli_connect("localhost", "alon", "laplateforme", "ben-david-alon_module_connexion");
 
+//connect databse in development
 $mysqli = mysqli_connect("localhost", "root", "", "moduleconnexion");
+
+
 if (mysqli_connect_errno()) {
     die('conecnection error' . mysqli_connect_error());
 }
@@ -74,21 +79,21 @@ if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
 // if (isset($_POST['submit'])) {
 //     header('Location: ' . 'connexion.php');
 // }
-$mysqli = new mysqli("localhost", "root", "", "moduleconnexion");
+// $mysqli = new mysqli("localhost", "root", "", "moduleconnexion");
 //select students table 
-$request = $mysqli->query("SELECT * FROM utilisateurs where  login ");
+// $request = $mysqli->query("SELECT * FROM utilisateurs where  login ");
 //insert into n array
 
-while (($fetched_table = $request->fetch_array())  != 0) {
-    var_dump($fetched_table);
+// while (($fetched_table = $request->fetch_array())  != 0) {
+//     var_dump($fetched_table);
 
-    if ($_POST['loginUsr'] == $fetched_table[0]) {
-        echo "there is a match";
-    }
-    if (isset($_POST['loginUsr'])) {
+//     if ($_POST['loginUsr'] == $fetched_table[0]) {
+       
+//     }
+//     if (isset($_POST['loginUsr'])) {
 
-        var_dump($fetched_table);
-        echo $fetched_table[0];
-    }
-    var_dump($fetched_table);
-}
+//         var_dump($fetched_table);
+//         echo $fetched_table[0];
+//     }
+//     var_dump($fetched_table);
+// }

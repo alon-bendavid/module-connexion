@@ -8,6 +8,15 @@ include('header.php');
 
         <h1>home page</h1>
 
+        <?php
+        if (isset($_SESSION['admin'])) {
+
+            echo  "<p>admin is logged</p>";
+        }
+
+
+        ?>
+
 
     </main>
 

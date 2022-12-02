@@ -1,5 +1,14 @@
 <?php
 
+if (isset($_POST['delSes'])) {
+    echo "it works";
+    session_start();
+    session_unset();
+    session_destroy();
+    // $_SESSION['admin'] = false;
+}
+// include('../inclueds/login.php');
+
 
 
 ?>
@@ -22,16 +31,31 @@
 <header>
     <nav>
         <ul>
-            <div class="navBar">
+            <div class="navBar" method="post">
                 <li> <a href="index.php">home</a> </li>
                 <li> <a href="inscription.php">Sign Up</a> </li>
                 <li> <a href="connexion.php">Sign In</a> </li>
                 <li> <a href="profil.php">Profile</a> </li>
+                <!-- <?php echo "hello"; ?> -->
 
-                <li> <a href="admin.php">Admin Page</a> </li>
-                <?php if (isset($_SESSION['admin'])) {
-                    '  <li> <a href="index.php">test</a> </li>  ';
-                } ?>
+                <?php
+
+                if ($_SESSION['admin'] = true) {
+                    echo "<li><a href='index.php'>admin</a></li> ";
+                }
+
+
+                if ($_SESSION['active'] = true) {
+
+                    echo "   <button type='submit' name='delSes'>logout </button> ";
+                } else {
+                    echo "   <button type='submit' name='delSes'>login </button> ";
+                }
+                ?>
+
+
+
+
             </div>
 
         </ul>
