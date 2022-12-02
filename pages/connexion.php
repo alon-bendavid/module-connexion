@@ -7,6 +7,10 @@ include('../inclueds/login.php');
 
 <body>
     <h1>sign in</h1>
+    <?php
+
+    ?>
+
     <form action="connexion.php" method="post">
         <div class="box">
             <input type="text" placeholder="username" name="loginUsr"><br required>

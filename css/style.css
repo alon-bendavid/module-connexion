@@ -71,3 +71,9 @@ header{
     border-radius: 15px;
     width: 100%;
 }
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.admin{
+    color: rgb(99, 99, 99);
+}

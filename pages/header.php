@@ -1,5 +1,5 @@
 <?php
-
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +29,14 @@
 
                 <?php
                 if ($_SESSION['user'] = true) {
-                    echo " <li> <a href='index.php'>logout</a> </li>";
+                    echo " <li> <a href='logdoff.php'>logout</a> </li>";
                 }
+                // if ($_SESSION['admin'] == 'active') {
+                //     echo "<li > <a href='admin.php'>admin page</a> </li>";
+
+                //     // echo "work";
+                // }
+
                 // if ($_SESSION['admin'] = true) {
                 //     echo "<li><a href='index.php'>admin</a></li> ";
                 // }

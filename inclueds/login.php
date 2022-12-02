@@ -23,6 +23,7 @@ $users = $query->fetch_all();
 // $_SESSION['active'] = false;
 // $_SESSION['admin'] = false;
 $_SESSION['useInfo'] = [];
+$_SESSION['admin'] = 'disActive';
 if (isset($_POST['loginSub'])) {
     foreach ($users as $user) {
         // print_r($user[1]);
@@ -31,12 +32,12 @@ if (isset($_POST['loginSub'])) {
             if ($_POST['loginPwd'] == $user[4]) {
                 $_SESSION['user'] = $user[1];
                 $_SESSION['useInfo'] = [$user[1], $user[2], $user[3], $user[4]];
-                print_r($_SESSION['useInfo']);
+                // print_r($_SESSION['useInfo']);
 
                 print_r("welcome "  . $_SESSION['user'] . " you are now logged in");
                 if ($_SESSION['user'] == 'admin') {
-
-                    echo "work";
+                    $_SESSION['admin'] = 'active';
+                    // echo "work";
                 }
             }
         }

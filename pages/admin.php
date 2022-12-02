@@ -1,13 +1,30 @@
 <?php
+
 include('header.php');
+include('../inclueds/login.php');
+
+
 
 ?>
 
 <body>
     <h1>admin page</h1>
-    <?php if (isset($_SESSION['admin'])) {
-        echo "welcome back admin";
-    } ?>
+    <table>
+        <tr>
+            <?php
+            foreach ($users as $user) {
+                // print_r($user);
+                echo " <td> $user </td>";
+            }
+
+
+
+
+
+            ?>
+        </tr>
+    </table>
+
 
 </body>
 

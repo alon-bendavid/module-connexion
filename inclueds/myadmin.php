@@ -61,13 +61,15 @@ if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
     $sql = "INSERT INTO utilisateurs (`id`, `login`, `prenom`, `nom`, `password`) VALUES (NULL,?,?, ?,?)";
     $stmt = mysqli_stmt_init($mysqli);
 
+
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         die(mysqli_error($mysqli));
     }
     mysqli_stmt_bind_param($stmt, "ssss", $username, $name, $Lname, $pwd);
     mysqli_stmt_execute($stmt);
+    echo "user hes succesfully created";
+    // sleep(2);
     header('Location: ' . 'connexion.php');
-    echo "user hes been successfully created";
 }
 
 
