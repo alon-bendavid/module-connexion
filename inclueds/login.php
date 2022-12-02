@@ -1,10 +1,11 @@
 <?php
 session_start();
+include('connect.php');
 //conect into database in plesk
 // $con = mysqli_connect("localhost", "alon", "laplateforme", "ben-david-alon_module_connexion");
 
 //connect to database in development
-$con = mysqli_connect("localhost", "root", "", "moduleconnexion");
+// $con = mysqli_connect("localhost", "root", "", "moduleconnexion");
 
 if (mysqli_connect_errno()) {
     die('conecnection error' . mysqli_connect_error());
@@ -19,9 +20,9 @@ $users = $query->fetch_all();
 
 
 //session off till somone logs in 
-$_SESSION['active'] = false;
-$_SESSION['admin'] = false;
-
+// $_SESSION['active'] = false;
+// $_SESSION['admin'] = false;
+$_SESSION['useInfo'] = [];
 if (isset($_POST['loginSub'])) {
     foreach ($users as $user) {
         // print_r($user[1]);
@@ -29,12 +30,13 @@ if (isset($_POST['loginSub'])) {
             // print_r($user);
             if ($_POST['loginPwd'] == $user[4]) {
                 $_SESSION['user'] = $user[1];
-                $_SESSION['active'] = true;
+                $_SESSION['useInfo'] = [$user[1], $user[2], $user[3], $user[4]];
+                print_r($_SESSION['useInfo']);
 
                 print_r("welcome "  . $_SESSION['user'] . " you are now logged in");
-                if ($user[1] == 'admin') {
-                    $_SESSION['admin'] = true;
-                    // echo "work";
+                if ($_SESSION['user'] == 'admin') {
+
+                    echo "work";
                 }
             }
         }

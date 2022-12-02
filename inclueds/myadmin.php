@@ -1,9 +1,10 @@
 <?php
+include('connect.php');
 //connect into database when inside plesk
 // $mysqli = mysqli_connect("localhost", "alon", "laplateforme", "ben-david-alon_module_connexion");
 
 //connect databse in development
-$mysqli = mysqli_connect("localhost", "root", "", "moduleconnexion");
+// $mysqli = mysqli_connect("localhost", "root", "", "moduleconnexion");
 
 
 if (mysqli_connect_errno()) {

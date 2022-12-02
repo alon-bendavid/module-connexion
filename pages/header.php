@@ -1,16 +1,5 @@
 <?php
 
-if (isset($_POST['delSes'])) {
-    echo "it works";
-    session_start();
-    session_unset();
-    session_destroy();
-    // $_SESSION['admin'] = false;
-}
-// include('../inclueds/login.php');
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,19 +28,24 @@ if (isset($_POST['delSes'])) {
                 <!-- <?php echo "hello"; ?> -->
 
                 <?php
-
-                if ($_SESSION['admin'] = true) {
-                    echo "<li><a href='index.php'>admin</a></li> ";
+                if ($_SESSION['user'] = true) {
+                    echo " <li> <a href='index.php'>logout</a> </li>";
                 }
+                // if ($_SESSION['admin'] = true) {
+                //     echo "<li><a href='index.php'>admin</a></li> ";
+                // }
 
 
-                if ($_SESSION['active'] = true) {
+                // if ($_SESSION['active'] = true) {
 
-                    echo "   <button type='submit' name='delSes'>logout </button> ";
-                } else {
-                    echo "   <button type='submit' name='delSes'>login </button> ";
-                }
+                //     echo "   <button type='submit' name='delSes'>logout </button> ";
+                // } else {
+                //     echo "   <button type='submit' name='delSes'>login </button> ";
+                // }
                 ?>
+                <table>
+
+                </table>
 
 
 
