@@ -9,12 +9,14 @@ include('../inclueds/connect.php');
 
 
 ?>
+<!-- fetching information from database to present it in the site -->
 
 <body>
     <h1>admin page</h1>
+    <p>All site users</p>
 
     <?php
-    // $con=mysqli_connect("example.com","peter","abc123","my_db");
+
     // Check connection
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -22,8 +24,9 @@ include('../inclueds/connect.php');
 
     $result = mysqli_query($con, "SELECT * FROM utilisateurs");
 
-    echo "<table border='1'>
+    echo "<table   class='styled-table'>
 <tr>
+<th>id</th>
 <th>username</th>
 <th>prenom</th>
 <th>nom</th>
@@ -32,6 +35,7 @@ include('../inclueds/connect.php');
 
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
+        echo "<td>" . $row['id'] . "</td>";
         echo "<td>" . $row['login'] . "</td>";
         echo "<td>" . $row['prenom'] . "</td>";
         echo "<td>" . $row['nom'] . "</td>";
