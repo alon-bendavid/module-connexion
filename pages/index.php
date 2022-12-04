@@ -7,7 +7,8 @@ include('header.php');
 <body>
     <main>
 
-        <h1>home page</h1>
+        <h1>Welcome To Log In Site</h1>
+
 
         <?php
         // if ($_SESSION['user'] = 'admin') {

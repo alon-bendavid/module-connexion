@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('header.php');
+include('../inclueds/connect.php')
 
 ?>
 
@@ -22,7 +23,7 @@ include('header.php');
 
         if (isset($_POST['editSub'])) {
 
-            echo "lolol";
+            $sql = "UPDATE utilisateurs SET nom='Doe' WHERE id=2";
         }
 
 
