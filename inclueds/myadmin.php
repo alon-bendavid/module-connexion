@@ -67,7 +67,7 @@ if (isset($_POST['submit']) &&  $exiest == 0 && $passCheck = true) {
     }
     mysqli_stmt_bind_param($stmt, "ssss", $username, $name, $Lname, $pwd);
     mysqli_stmt_execute($stmt);
-    echo "user hes succesfully created";
+    echo "user hes successfully created";
     // sleep(2);
     header('Location: ' . 'connexion.php');
 }
