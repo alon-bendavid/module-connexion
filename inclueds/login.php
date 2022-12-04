@@ -40,7 +40,7 @@ if (isset($_POST['loginSub'])) {
                 print_r("welcome "  . $_SESSION['user'] . " you are now logged in");
                 if ($_SESSION['user'] == 'admin') {
                     $_SESSION['admin'] = 'active';
-                    header('Location: ' . 'index.php');
+                    header('Location: ' . 'admin.php');
 
                     // echo "work";
                 }

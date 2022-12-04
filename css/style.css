@@ -104,3 +104,28 @@ p{
 .styled-table tbody tr:first-of-type {
     border-bottom: 2px solid rgb(12, 193, 238);
 }
+
+.video{
+height: 35em;
+width: 90vw;
+/* position: relative; */
+margin-top: 2%;
+margin-bottom: 2%;
+
+   
+}  
+.viedo_text{
+    position: absolute;
+ 
+    color: #ffffff;
+    align-items: center;
+    font-family: 'Carter One', cursive;
+   right:40%;
+   margin-top: 15%;
+
+    
+    
+    
+ 
+
+    }

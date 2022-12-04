@@ -6,8 +6,12 @@ include('header.php');
 
 <body>
     <main>
+        <h1 class="viedo_text">Welcome To Log In Site</h1>
 
-        <h1>Welcome To Log In Site</h1>
+
+        <video class="video" autoplay loop muted src="..\media\pexels-rostislav-uzunov-9150545.mp4"></video>
+        <p class="viedo_text">
+        </p>
 
 
         <?php
