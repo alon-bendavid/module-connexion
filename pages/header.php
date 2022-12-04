@@ -28,7 +28,7 @@
                 <!-- <?php echo "hello"; ?> -->
 
                 <?php
-                if ($_SESSION['user'] = true) {
+                if ($_SESSION['user'] = 'active') {
                     echo " <li> <a href='logdoff.php'>logout</a> </li>";
                 }
                 // if ($_SESSION['admin'] == 'active') {

@@ -20,10 +20,17 @@ include('header.php');
         }
         echo "<button type='submit' name='editSub'>Submit</button>";
 
+        if (isset($_POST['editSub'])) {
+
+            echo "lolol";
+        }
+
 
 
         // echo $_SESSION['useInfo'][1] . $_SESSION['useInfo'][2];
         // print_r($_SESSION['useInfo']);
+    } else {
+        echo "you are not connected, connect to show your info.";
     }
 
 

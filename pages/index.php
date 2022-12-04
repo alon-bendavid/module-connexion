@@ -17,7 +17,7 @@ include('header.php');
 
             // echo "work";
         } else {
-            echo "admin is not connected";
+            echo " ";
         }
 
 
