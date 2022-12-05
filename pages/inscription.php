@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-include('../inclueds/myadmin.php');
+include('../includes/myadmin.php');
 
 
 // $username = $_POST['username'];

@@ -3,7 +3,7 @@
 include('header.php');
 // include('../inclueds/login.php');
 // include('../inclueds/myadmin.php');
-include('../inclueds/connect.php');
+include('../includes/connect.php');
 
 
 

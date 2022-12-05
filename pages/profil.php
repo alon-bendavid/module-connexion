@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('header.php');
-include('../inclueds/connect.php')
+include('../includes/connect.php')
 
 ?>
 

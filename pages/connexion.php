@@ -1,7 +1,7 @@
 <?php
 include('header.php');
 
-include('../inclueds/login.php');
+include('../includes/login.php');
 
 ?>
 
